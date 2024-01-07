@@ -154,7 +154,9 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
 
-getPasswordOptions();
+//8. Call all functions used in this file
+
+getPasswordOptions(); 
 getRandom(arr);
 generatePassword();
 
