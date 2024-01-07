@@ -93,13 +93,12 @@ function getPasswordOptions() {
 
 //1.1 Prompt user for password length (8 to 128 characters)
 
-var passLength = parseInt(prompt("Please select your password length between 8 and 128 characters:")); 
+var passLength = Number(prompt("Please select your password length between 8 and 128 characters:")); 
                                                                                                                     
 //1.2 If password length not correct, prompt `Password not correct length and return to select password length prompt"
-if (passLength < 8 || passLength > 128) {
+while (passLength < 8 || passLength > 128) {
 alert("Please choose a number between 8 and 128:");
-passLength = parseInt(prompt("Please select your password length between 8 and 128 characters:"));
-return;
+passLength = Number(prompt("Please select your password length between 8 and 128 characters:")); 
 }
 
 //2.1 Ask user to select a character type from specialCharacters, numericCharacters, lowerCasedCharacters, upperCasedCharacters. 
@@ -133,3 +132,8 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
+getPasswordOptions();
+getRandom(arr);
+generatePassword();
+
