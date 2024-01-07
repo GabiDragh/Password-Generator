@@ -92,7 +92,6 @@ var upperCasedCharacters = [
 function getPasswordOptions() {
 
 //1.1 Prompt user for password length (8 to 128 characters)
-
 var passLength = Number(prompt("Please select your password length between 8 and 128 characters:")); 
                                                                                                                     
 //1.2 If password length not correct, prompt `Password not correct length and return to select password length prompt"
@@ -102,11 +101,33 @@ passLength = Number(prompt("Please select your password length between 8 and 128
 }
 
 //2.1 Ask user to select a character type from specialCharacters, numericCharacters, lowerCasedCharacters, upperCasedCharacters. 
+var charTypes = [{
+  name: "special characters",
+  type: specialCharacters,
+  user_selected: true
+}, 
+  {name: "numeric characters",
+  type: numericCharacters,
+  user_selected: true
+}, 
 
+  {name: "lower case characters",
+  type: lowerCasedCharacters,
+  user_selected: this.true
+}, 
+  {name: "upper case characters",
+  type: upperCasedCharacters,
+  user_selected: this.true
+}];
 
-
-//2.2 If user does not select any, prompt 'Please select at least one character type' and return to selection. If user selects at least one character type, then proceed to next step.
+for (var i=0; i < charTypes.length; i++) {
+  charTypes[i].user_selected = confirm("Should the password include " + charTypes[i].name + " ?");
+};
 }
+//2.2 If user does not select any, prompt 'Please select at least one character type' and return to selection. If user selects at least one character type, then proceed to next step.
+
+
+
 
 console.log("Password length is: " + prompt);
 
