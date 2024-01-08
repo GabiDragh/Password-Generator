@@ -113,21 +113,31 @@ var charTypes = [{
 
   {name: "lower case characters",
   type: lowerCasedCharacters,
-  user_selected: this.true
+  user_selected: true
 }, 
   {name: "upper case characters",
   type: upperCasedCharacters,
-  user_selected: this.true
+  user_selected: true
 }];
 
 for (var i=0; i < charTypes.length; i++) {
   charTypes[i].user_selected = confirm("Should the password include " + charTypes[i].name + " ?");
 };
+
+//TODO: !!!! NOT WORKING!!!!2.2 If user does not select any, prompt 'Please select at least one character type' and return to selection. If user selects at least one character type, then proceed to next step.
+
+for (var i=0; i < charTypes.length; i++) {
+  var selectConfirm = charTypes[i].user_selected;
+
+if (selectConfirm === true) {
+  alert("Awesome! Will get you a new password!");
+  break;
+} else {
+  alert("Please select at least one character type!");
+  var selectConfirm = confirm("Should the password include " + charTypes[i].name + " ?");
 }
-//2.2 If user does not select any, prompt 'Please select at least one character type' and return to selection. If user selects at least one character type, then proceed to next step.
-
-
-
+}
+}
 
 console.log("Password length is: " + prompt);
 
