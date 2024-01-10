@@ -18,6 +18,6 @@ Once the random character was generated, the password can be created by filling 
 Screenshot of the application
 ![Application Screenshot](Password-Generator-index-html-2024-01-09.png?raw=true "Application Screenshot")
 
-Link to deployed application 
+Link to deployed application https://gabidragh.github.io/Password-Generator/
 
 
