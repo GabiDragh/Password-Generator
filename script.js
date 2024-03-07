@@ -156,13 +156,30 @@ function getRandom(charArr) {
  function generatePassword() {
 
   getPasswordOptions();
-  var selectedArr = [];
   var password = ""; 
+
+  // Define variable to store user choice of character types
+  var selectedArr = charTypes.filter(charType => charType.user_selected);
   
+
+  // //  If statement to check that at least one character type is selected
+  //  if (selectedArr.length === 0) {
+  //   alert ("Please select at least one character type.");
+  //   getPasswordOptions();
+  //  }
+
+  // Select random characters from selected character types array
   for ( var i = 0; i < passLength; i++) {
-    var randomIndex = Math.floor(Math.random() * charTypes.length);
-    selectedArr = selectedArr.concat(charTypes[randomIndex].type);
-    password += getRandom(selectedArr);
+    // var randomIndex = Math.floor(Math.random() * selectedArr.length);
+    // var selectedChar = selectedArr[randomIndex].type;
+    // if(selectedChar && selectedChar.type) {
+    //   password += getRandom(selectedChar.type);
+    // }
+    
+    var randomType = getRandom(selectedArr);
+
+    var randomChar = getRandom(randomType.type);
+    password += randomChar;
   }
   
   return password;
