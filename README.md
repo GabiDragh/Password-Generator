@@ -13,8 +13,6 @@ After validating that at least one character type was selected, the application 
 
 Once the random character was generated, the password can be created by filling in the rest with random letters.
 
-!!!At the moment, the application is not fully finished. The password length and the user selection sections are functional, but the generate password section is not working and I can't figure out what I am doing wrong. It will most probably be a resubmission, but did not want to leave it un-submitted, as I am invested in figuring it out and would like to get some feedback on it.
-
 Screenshot of the application
 ![Application Screenshot](Password-Generator-index-html-2024-01-09.png?raw=true "Application Screenshot")
 

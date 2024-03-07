@@ -127,7 +127,7 @@ function getPasswordOptions() {
   user_selected: true
  });
 
- for (var i=0; i < charTypes.length; i++) {
+ for (var i = 0; i < charTypes.length; i++) {
   charTypes[i].user_selected = confirm("Should the password include " + charTypes[i].name + " ?");
  };
 
